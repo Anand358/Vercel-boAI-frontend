@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Inter", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+}
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+.text-manipulate {
+	text-align: center;
+	/* margin-top: 5%; */
+	font-family: Lato;
+	/* font-style: italic; */
+	font-weight: normal;
+	/* font-size: ; */
+	background-clip: text;
+
+	color: #fff;
+}
+
+.text-hover {
+	color: #fff;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.1s ease-in;
+}
+
+.text-hover:hover {
+	color: #ff6600;
+	text-shadow: 0px 0px 30px #ff6600;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.custom-checkbox {
+	appearance: none; /* Remove default checkbox style */
+	-webkit-appearance: none;
+	background-color: #242424; /* Custom background */
+	border: 2px solid #444444; /* Custom border */
+	width: 20px; /* Size */
+	height: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.custom-checkbox:checked {
+	background-color: #ff6600; /* Color when checked */
+}
+.custom-checkbox:checked:before {
+	content: "✓"; /* Custom checkmark */
+	color: white;
+	font-size: 15px;
+}
